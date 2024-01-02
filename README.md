@@ -86,3 +86,43 @@ then run the app
 ```sh
 docker compose up
 ```
+
+update docker-compose yaml file with postgres and add .env file for it
+```yaml
+...
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+  
+  volumes:
+    postgres-db:
+
+```
+enter the docker shell
+```sh
+docker compose run --service-ports web bash
+```
+then run the following command to install the gorm ORM package and postgres driver
+```dockershell
+go get gorm.io/gorm
+go get gorm.io/driver/postgres
+```
+
+create the models dir and models.go file
+```sh
+mkdir models
+touch models/models.go
+```
+
+create the database directory and database.go file
+```sh
+mkdir database
+touch database/database.go
+```

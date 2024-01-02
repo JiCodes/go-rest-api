@@ -1,8 +1,14 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/JiCodes/go-rest-api/database"
+
+)
 
 func main() {
+		database.ConnectDb()
+		
     app := fiber.New()
 
     app.Get("/", func(c *fiber.Ctx) error {
