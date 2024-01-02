@@ -8,12 +8,9 @@ import (
 
 func main() {
 		database.ConnectDb()
-		
     app := fiber.New()
 
-    app.Get("/", func(c *fiber.Ctx) error {
-        return c.SendString("Hello, Go API with fiber :)")
-    })
+		setUpRoutes(app)
 
     app.Listen(":3000")
 }

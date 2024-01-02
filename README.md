@@ -126,3 +126,16 @@ create the database directory and database.go file
 mkdir database
 touch database/database.go
 ```
+
+## Routes and Endpoints
+
+```sh
+touch cmd/routes.go # to hold all the routes
+```
+
+```sh
+mkdir handlers
+touch handlers/handlers.go # to hold all the handlers for the routes
+```
+
+then add some routes and handlers to the files

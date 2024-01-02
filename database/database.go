@@ -3,12 +3,12 @@ package database
 import (
 	"fmt"
 	"log"
-	"logger"
 	"os"
 
 	"github.com/JiCodes/go-rest-api/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 type Dbinstance struct {
@@ -32,11 +32,13 @@ func ConnectDb() {
 		os.Exit(2)
 	}
 
-	log.Panicf("Connected to database %s successfully!\n", os.Getenv("DB_NAME"))
-	db.logger = logger.Default.LogMode(logger.Info)
+	log.Printf("Connected to database %s successfully!\n", os.Getenv("DB_NAME"))
+	db.Logger = logger.Default.LogMode(logger.Info)
 
 	log.Println("running migrations...")
 	db.AutoMigrate(&models.Fact{}) // run migrations to create tables we need from Gorm models
 
-	DB = Dbinstance{Db: db} // assign the db connection to the DB variable
+	DB = Dbinstance{
+		Db: db,
+	} // assign the db connection to the DB variable
 }
