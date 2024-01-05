@@ -166,4 +166,7 @@ Add several views and partials to the layout's main.html file
 ## Add CRUD operations
 
 1. Remove confirmation page form the handler and redirect to the facts list page
+2. Add ShowFact handler to show a single fact and corresponding route and view
+
+
 
