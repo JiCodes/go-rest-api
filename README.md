@@ -146,5 +146,18 @@ then add some routes and handlers to the files
 ```dockershell
 go get github.com/gofiber/template/html/v2
 
+mdkir views
 
+touch views/index.html
 ```
+
+```sh
+docker compose up
+```
+create a layout file in layouts dir
+```sh
+mkdir layouts
+touch layouts/main.html
+```
+
+Add several views and partials to the layout's main.html file

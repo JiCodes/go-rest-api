@@ -11,6 +11,8 @@ func setUpRoutes(app *fiber.App) {
 
 	app.Get("/facts", handlers.ListFacts)
 
+	app.Get("/fact", handlers.NewFactView)
+
 	app.Post("/fact", handlers.CreateFact)
 }
 
