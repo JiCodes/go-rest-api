@@ -5,6 +5,8 @@ import (
 	"github.com/gofiber/template/html/v2"
 
 	"github.com/JiCodes/go-rest-api/database"
+
+	"github.com/JiCodes/go-rest-api/handlers"
 )
 
 func main() {
@@ -21,6 +23,8 @@ func main() {
 		setUpRoutes(app)
 
 		app.Static("/", "./public")
+
+		app.Use(handlers.NotFound)
 
     app.Listen(":3000")
 }
