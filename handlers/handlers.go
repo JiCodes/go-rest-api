@@ -7,10 +7,6 @@ import (
 	"github.com/JiCodes/go-rest-api/models"
 )
 
-func Home(c *fiber.Ctx) error {
-	return c.SendString("Hello, Go API with fiber :)")
-}
-
 func ListFacts(c *fiber.Ctx) error {
 	facts := []models.Fact{}
 	database.DB.Db.Find(&facts)
