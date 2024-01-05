@@ -139,3 +139,12 @@ touch handlers/handlers.go # to hold all the handlers for the routes
 ```
 
 then add some routes and handlers to the files
+
+
+## enable templates 
+
+```dockershell
+go get github.com/gofiber/template/html/v2
+
+
+```
