@@ -3,8 +3,8 @@ package handlers
 import (
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/JiCodes/go-rest-api/models"
 	"github.com/JiCodes/go-rest-api/database"
+	"github.com/JiCodes/go-rest-api/models"
 )
 
 func Home(c *fiber.Ctx) error {
@@ -15,7 +15,11 @@ func ListFacts(c *fiber.Ctx) error {
 	facts := []models.Fact{}
 	database.DB.Db.Find(&facts)
 
-	return c.Status(200).JSON(facts)
+	return c.Render("index", fiber.Map{
+		"Title": "Facts",
+		"Subtitle": "Facts about Go",
+		"Facts": facts,
+		})
 }
 
 func CreateFact(c *fiber.Ctx) error {

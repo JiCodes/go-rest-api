@@ -6,6 +6,6 @@ import (
 
 type Fact struct {
 	gorm.Model
-	Questions string `json:"question" gorm:"text; not null; default:null"`
-	Answers string `json:"answer" gorm:"text; not null; default:null"`
+	Question string `json:"question" gorm:"text; not null; default:null"`
+	Answer string `json:"answer" gorm:"text; not null; default:null"`
 }

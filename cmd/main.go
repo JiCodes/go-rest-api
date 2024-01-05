@@ -15,6 +15,7 @@ func main() {
 
 		app := fiber.New(fiber.Config{
 			Views: engine,
+			ViewsLayout: "layouts/main",
 		})
 
 		setUpRoutes(app)
