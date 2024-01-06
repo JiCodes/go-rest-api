@@ -1,10 +1,12 @@
 <div>
   {{ if .Facts }} 
     {{ range .Facts }}
-      <div>
-        <h3>{{ .Question }}</h3>
-        <p>{{ .Answer }}</p>
-      </div>
+      <a href="fact/{{ .ID }}">
+        <div>
+          <h3>{{ .Question }}</h3>
+          <p>{{ .Answer }}</p>
+        </div>
+      </a>
       {{ end }} 
   {{ else }}
     <div>
