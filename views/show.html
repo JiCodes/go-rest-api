@@ -7,7 +7,7 @@
 
   <div class="actions">
     <a href="/fact/{{ .Fact.ID }}/edit" class="btn-secondary">Edit</a>
-    <button class="btn-danger">Delete</button>
+    <button data-fact-id="{{ .Fact.ID }}" class="delete-btn btn-danger">Delete</button>
   </div>
   {{ end }}
 </div>

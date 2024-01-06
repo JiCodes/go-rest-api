@@ -88,3 +88,14 @@ func UpdateFact(c *fiber.Ctx) error {
 
 	return ShowFact(c)
 }
+
+func DeleteFact(c *fiber.Ctx) error {
+	id := c.Params("id")
+	fact := models.Fact{}
+	result := database.DB.Db.Delete(&fact, id)
+	if result.Error != nil {
+		return NotFound(c)
+	}
+
+	return ListFacts(c)
+}

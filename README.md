@@ -167,6 +167,8 @@ Add several views and partials to the layout's main.html file
 
 1. Remove confirmation page form the handler and redirect to the facts list page
 2. Add ShowFact handler to show a single fact and corresponding route and view
+3. Add js to enable http patch method to update data
 
+4. Add DeleteFact handler to delete a fact and corresponding route and view
 
 
