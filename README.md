@@ -163,7 +163,9 @@ touch layouts/main.html
 Add several views and partials to the layout's main.html file
 
 
-## Add CRUD operations
+## Add CRUD operations to the app
+
+### we use JS fetch API to send http requests to the server (patch and delete)
 
 1. Remove confirmation page form the handler and redirect to the facts list page
 2. Add ShowFact handler to show a single fact and corresponding route and view
