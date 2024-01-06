@@ -1,4 +1,4 @@
-module github.com/JiCodes/go-rest-api
+module github.com/JiCodes/go-fullstack-app
 
 go 1.19
 

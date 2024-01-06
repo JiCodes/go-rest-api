@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/JiCodes/go-rest-api/handlers"
+	"github.com/JiCodes/go-fullstack-app/handlers"
 )
 
 func setUpRoutes(app *fiber.App) {

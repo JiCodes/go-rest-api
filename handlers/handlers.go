@@ -3,8 +3,8 @@ package handlers
 import (
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/JiCodes/go-rest-api/database"
-	"github.com/JiCodes/go-rest-api/models"
+	"github.com/JiCodes/go-fullstack-app/database"
+	"github.com/JiCodes/go-fullstack-app/models"
 )
 
 func ListFacts(c *fiber.Ctx) error {

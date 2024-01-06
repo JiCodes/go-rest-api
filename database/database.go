@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/JiCodes/go-rest-api/models"
+	"github.com/JiCodes/go-fullstack-app/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

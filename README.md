@@ -13,7 +13,7 @@ docker compose run --service-ports web bash
 in the Go container shell, initialize a new Go module in your project using go mod init. This will create a go.mod file that will be used to
 install and manage dependencies
 ```sh
-go mod init github.com/JiCodes/go-rest-api
+go mod init github.com/JiCodes/go-fullstack-app
 ```
 
 then install the fiber package
