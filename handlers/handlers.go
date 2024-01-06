@@ -74,9 +74,10 @@ func EditFact(c *fiber.Ctx) error {
 
 func UpdateFact(c *fiber.Ctx) error {
 	id := c.Params("id")
-	fact := models.Fact{}	
+	fact := new(models.Fact) 
 	
-	if err := c.BodyParser(&fact); err != nil {
+	// Parse the request body and populate the 'fact' struct with the data
+	if err := c.BodyParser(fact); err != nil { 
 		return c.Status(fiber.StatusServiceUnavailable).SendString(err.Error())
 	}
 	

@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Go fullstack</title>
-  <link rel="stylesheet" href="/styles/main.css?v=1">
-</head>
-<body>
-  <div class="wrapper">
-    {{ template "header" .}}
-    <h1>{{ .Title }}</h1>
-    <h2>{{ .Subtitle }}</h2>
-    {{ embed }}
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go fullstack</title>
+    <link id="styles" rel="stylesheet" href="/styles/main.css?" />
+  </head>
+  <body>
+    <div class="wrapper">
+      {{ template "header" .}}
+      <h1>{{ .Title }}</h1>
+      <h2>{{ .Subtitle }}</h2>
+      {{ embed }}
+    </div>
+  </body>
 </html>
+<script id="main" src="/javascript/app.js"></script>
+<script>
+  const timeStamp = Date.now();
+  const styles = document.querySelector("link#styles");
+  const appScript = document.querySelector("script#main");
+  styles.href += `?t=${timeStamp}`;
+  appScript.src += `?t=${timeStamp}`;
+</script>
