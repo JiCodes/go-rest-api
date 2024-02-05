@@ -4,9 +4,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
 
-	"github.com/JiCodes/go-fullstack-app/database"
+	"github.com/jicodes/go-fullstack-app/database"
 
-	"github.com/JiCodes/go-fullstack-app/handlers"
+	"github.com/jicodes/go-fullstack-app/handlers"
 )
 
 func main() {

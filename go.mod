@@ -1,4 +1,4 @@
-module github.com/JiCodes/go-fullstack-app
+module github.com/jicodes/go-fullstack-app
 
 go 1.19
 
